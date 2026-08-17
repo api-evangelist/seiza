@@ -42,6 +42,27 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Seiza is a company surfaced as a portfolio company of serena and added to the API Evangelist network as a stub for enrichment. Sector: saas. This profile is a lead awaiting the enrichment pipeline.
+Seiza was a French social-recruitment advertising and recruitment-automation SaaS platform dedicated to
+frontline hiring — hospitality, transport and logistics, agri-food, industry, retail, temp staffing,
+healthcare and construction. Founded in Paris in 2010 as **Work4 Labs** by Stephane Le Viet, Gautier
+Machelon and Matt Brown, it sourced candidates through non-professional social networks rather than job
+boards, later rebranding from Work4 to Seiza. It raised roughly $22.8M and served about 400 clients across
+Europe and the US. Seiza was **acquired by [Adzuna](https://github.com/api-evangelist/adzuna) on
+2024-11-18** and folded into Adzuna's social recruitment line.
 
-Source: portfolio company of [serena](https://github.com/api-evangelist/serena) — https://seiza.fr/
+**There is no API surface to enrich.** The product was a recruiter web application plus a fixed catalog of
+23 named ATS connectors (Bullhorn, Workday, Greenhouse, SmartRecruiters, iCIMS, Cornerstone, Recruitee and
+others), with anything outside that list handled as a bespoke integration through sales. No public API,
+developer portal, API reference, OpenAPI/AsyncAPI specification, webhook catalog, SDK or CLI was ever
+published — a 557-URL census of the archived site returned only marketing, blog, FAQ and legal pages, and
+every `/.well-known/` path 404'd while the site was live.
+
+The company domain `seiza.co` was still serving in May 2026 but **no longer resolves** (SERVFAIL — the
+GoDaddy delegation answers REFUSED for the zone) as of 2026-08-17. Note that `seiza.fr`, recorded as this
+company's website by the portfolio harvest, is **not** the company: it is an unrelated GoDaddy Website
+Builder placeholder ("Find Your Zen") with Wayback history back to 2008, and it is deliberately not wired
+as a website pointer. Serena's own portfolio profile names `seiza.co`.
+
+This profile is retained as a historical company record.
+
+Source: portfolio company of [serena](https://github.com/api-evangelist/serena) — https://www.seiza.co/ (unresolved)

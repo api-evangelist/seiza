@@ -1,0 +1,81 @@
+generated: '2026-08-17'
+method: searched
+source: >-
+  registry.npmjs.org, pypi.org, rubygems.org, crates.io, plus the archived seiza.co site
+  (557-URL Internet Archive census) and Adzuna's acquisition announcement
+name: Seiza client libraries
+summary: >-
+  Seiza published NO first-party client libraries, SDKs or CLIs. The company shipped a
+  recruiter web application plus a fixed catalog of 23 pre-built ATS connectors; integrations
+  outside that list were bespoke work routed through sales, so there was never a public
+  package surface for a developer to install. Every registry entry that answers to the name
+  "seiza" belongs to an unrelated third party (see name_collisions below) — recorded here so a
+  future run does not misattribute them. No Packages or SDKs pointer is emitted in apis.yml.
+package_count: 0
+official_package_count: 0
+packages: []
+name_collisions:
+- registry: npm
+  name: seiza
+  version: null
+  published: null
+  official: false
+  note: registry.npmjs.org/seiza returns 404 — the bare name is unpublished.
+- registry: npm
+  name: '@seiza/astro-overlay'
+  version: 0.5.0
+  published: '2026-07-20'
+  official: false
+  note: >-
+    Astrophotography astrometry overlay library (github.com/theatrus/seiza-overlay). Unrelated
+    to the recruitment company.
+- registry: pypi
+  name: seiza
+  version: 0.15.8
+  published: '2026-08-16'
+  official: false
+  note: >-
+    "Astrometry and image processing for astrophotography" — homepage seiza.fyi, repository
+    github.com/theatrus/seiza. Unrelated to the recruitment company.
+- registry: crates.io
+  name: seiza
+  version: 0.15.8
+  published: '2026-08-16'
+  official: false
+  note: >-
+    Rust crate of the same astrophotography project (github.com/theatrus/seiza), 37 versions.
+    Unrelated to the recruitment company.
+- registry: rubygems
+  name: seiza
+  version: 0.1.0
+  published: '2022-12-23'
+  official: false
+  note: >-
+    One-method novelty gem ("Return seiza.", github.com/risacan/seiza). Unrelated to the
+    recruitment company.
+registries_checked:
+- registry: npm
+  status: 200
+  result: no first-party package
+- registry: pypi
+  status: 200
+  result: no first-party package
+- registry: rubygems
+  status: 200
+  result: no first-party package
+- registry: crates.io
+  status: 200
+  result: no first-party package
+- registry: maven-central
+  status: not-checked
+  result: >-
+    skipped — the provider published no JVM surface and no SDK page existed to name one
+- registry: nuget
+  status: not-checked
+  result: >-
+    skipped — the provider published no .NET surface and no SDK page existed to name one
+- registry: pkg.go.dev
+  status: not-checked
+  result: >-
+    skipped — the provider published no Go surface and no SDK page existed to name one
+checked: '2026-08-17'

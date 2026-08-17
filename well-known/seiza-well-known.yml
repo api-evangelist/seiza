@@ -1,0 +1,164 @@
+generated: '2026-08-17'
+method: probed
+source: live DNS + HTTPS probes of every seiza.co host, plus the archived seiza.co crawl
+name: Seiza well-known probe
+summary: >-
+  No /.well-known/ document is served by Seiza on any host. The company domain seiza.co no
+  longer resolves (SERVFAIL — the GoDaddy delegation answers REFUSED for the zone), so every
+  probe fails at DNS before any HTTP request is made. While the site was live, the Internet
+  Archive recorded 404s for /.well-known/security.txt, /.well-known/openid-configuration and
+  /.well-known/ai-plugin.json on www.seiza.co, so this is a standing absence rather than a
+  consequence of the shutdown. NO WellKnown or SecurityTxt pointer is emitted in apis.yml:
+  nothing here is a served document.
+hosts:
+- host: seiza.co
+  relationship: company-domain
+  dns: SERVFAIL
+  note: Registered to 2027-06-28 at GoDaddy, clientRenewProhibited/clientTransferProhibited,
+    but the hosted zone behind the delegation is gone. Last archived live 2026-05-15.
+- host: www.seiza.co
+  relationship: company-domain
+  dns: SERVFAIL
+- host: api.seiza.co
+  relationship: company-domain (speculative subdomain, never documented)
+  dns: SERVFAIL
+- host: app.seiza.co
+  relationship: company-domain (speculative subdomain, never documented)
+  dns: SERVFAIL
+- host: docs.seiza.co
+  relationship: company-domain (speculative subdomain, never documented)
+  dns: SERVFAIL
+- host: seiza.fr
+  relationship: NOT-THE-COMPANY
+  dns: resolves (76.223.105.230 / 13.248.243.5, ns81/ns82.domaincontrol.com)
+  note: >-
+    Inherited from the Serena portfolio harvest but unrelated to this company — a GoDaddy
+    Website Builder placeholder titled "seiza.fr" with the tagline "Find Your Zen". Its
+    /llms.txt returns 200 but is a GoDaddy-generated stub for that placeholder site, NOT a
+    Seiza artifact, so it is not saved and no LLMsTxt pointer is emitted. Probed here only to
+    record why this host must never be credited to Seiza.
+probes:
+- host: seiza.co
+  path: /.well-known/security.txt
+  status: 0
+  result: dns-failure
+  file: null
+- host: seiza.co
+  path: /.well-known/openid-configuration
+  status: 0
+  result: dns-failure
+  file: null
+- host: seiza.co
+  path: /.well-known/oauth-authorization-server
+  status: 0
+  result: dns-failure
+  file: null
+- host: seiza.co
+  path: /.well-known/api-catalog
+  status: 0
+  result: dns-failure
+  file: null
+- host: seiza.co
+  path: /.well-known/ai-plugin.json
+  status: 0
+  result: dns-failure
+  file: null
+- host: www.seiza.co
+  path: /.well-known/security.txt
+  status: 0
+  result: dns-failure
+  file: null
+- host: www.seiza.co
+  path: /.well-known/openid-configuration
+  status: 0
+  result: dns-failure
+  file: null
+- host: www.seiza.co
+  path: /.well-known/oauth-authorization-server
+  status: 0
+  result: dns-failure
+  file: null
+- host: www.seiza.co
+  path: /.well-known/api-catalog
+  status: 0
+  result: dns-failure
+  file: null
+- host: www.seiza.co
+  path: /.well-known/ai-plugin.json
+  status: 0
+  result: dns-failure
+  file: null
+- host: api.seiza.co
+  path: /.well-known/security.txt
+  status: 0
+  result: dns-failure
+  file: null
+- host: app.seiza.co
+  path: /.well-known/security.txt
+  status: 0
+  result: dns-failure
+  file: null
+- host: docs.seiza.co
+  path: /.well-known/security.txt
+  status: 0
+  result: dns-failure
+  file: null
+- host: seiza.fr
+  path: /.well-known/security.txt
+  status: 404
+  result: miss
+  file: null
+  note: not-the-company host
+- host: seiza.fr
+  path: /.well-known/agent-card.json
+  status: 404
+  result: miss
+  file: null
+  note: not-the-company host
+- host: seiza.fr
+  path: /.well-known/agent.json
+  status: 404
+  result: miss
+  file: null
+  note: not-the-company host
+- host: seiza.fr
+  path: /.well-known/openid-configuration
+  status: 404
+  result: miss
+  file: null
+  note: not-the-company host
+- host: seiza.fr
+  path: /.well-known/oauth-authorization-server
+  status: 404
+  result: miss
+  file: null
+  note: not-the-company host
+- host: seiza.fr
+  path: /.well-known/api-catalog
+  status: 404
+  result: miss
+  file: null
+  note: not-the-company host
+- host: seiza.fr
+  path: /.well-known/ai-plugin.json
+  status: 404
+  result: miss
+  file: null
+  note: not-the-company host
+historical:
+- url: https://www.seiza.co/.well-known/security.txt
+  status: 404
+  source: Internet Archive CDX (crawled while the site was live)
+- url: https://www.seiza.co/.well-known/openid-configuration
+  status: 404
+  source: Internet Archive CDX
+- url: https://www.seiza.co/.well-known/ai-plugin.json
+  status: 404
+  source: Internet Archive CDX
+- url: https://www.seiza.co/.well-known/trust.txt
+  status: 404
+  source: Internet Archive CDX
+- url: https://www.seiza.co/.well-known/gpc.json
+  status: 404
+  source: Internet Archive CDX
+checked: '2026-08-17'
