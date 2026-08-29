@@ -44,6 +44,17 @@ x-domain-note: https://seiza.fr/ was recorded as this company's website by the S
   re-registered 2024-09-06, and has Wayback history back to 2008 predating the Seiza brand.
   Serena's own portfolio profile names seiza.co. It is deliberately not wired as a Website
   pointer.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 specificationVersion: '0.23'
 created: '2026-08-17'
 modified: '2026-08-17'
